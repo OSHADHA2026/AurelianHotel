@@ -1,0 +1,38 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Open Sans', sans-serif; background: var(--au-surface); color: var(--au-text); padding-top: 90px; }
+.main-content { max-width: 1400px; margin: 0 auto; padding: 32px; }
+.header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 32px; }
+.header h1 { font-family: 'Montserrat', serif; font-size: 32px; color: var(--au-text); }
+.header-actions { display: flex; gap: 12px; }
+.btn { padding: 12px 24px; border-radius: 4px; font-weight: 600; border: none; cursor: pointer; transition: all 0.3s; text-decoration: none; display: inline-flex; align-items: center; gap: 8px; font-size: 14px; }
+.btn-secondary { background: var(--au-surface); color: var(--au-muted); border: 1px solid #f2f9fd; }
+.btn-secondary:hover { background: var(--au-surface); border-color: #2bb3e6; color: #2bb3e6; }
+
+.room-info-card { background: var(--au-surface); border-radius: 5px; padding: 24px; margin-bottom: 32px; box-shadow: 0 4px 12px rgba(0, 0, 0,0.05); border: 1px solid #f2f9fd; display: flex; justify-content: space-between; align-items: center; }
+.room-info-content h2 { font-size: 20px; color: var(--au-text); margin-bottom: 4px; }
+.room-info-content p { color: var(--au-muted); font-size: 14px; }
+.room-badge { background: var(--au-soft); color: var(--au-text); padding: 6px 12px; border-radius: 2px; font-weight: 600; font-size: 13px; }
+
+.history-container { background: var(--au-surface); border-radius: 5px; overflow: hidden; box-shadow: 0 4px 12px rgba(0, 0, 0,0.05); border: 1px solid #f2f9fd; }
+.table { width: 100%; border-collapse: collapse; }
+.table thead { background: var(--au-surface); border-bottom: 2px solid #f2f9fd; }
+.table th { padding: 16px; text-align: left; font-weight: 600; color: var(--au-muted); font-size: 13px; letter-spacing: 0.5px; }
+.table td { padding: 16px; border-bottom: 1px solid #f2f9fd; font-size: 14px; }
+.table tbody tr:hover { background: var(--au-surface); }
+
+.guest-name { font-weight: 700; color: var(--au-text); }
+.room-no { color: #2bb3e6; font-weight: 700; }
+.date-cell { color: var(--au-text); }
+.duration-badge { background: #dce9f1; color: var(--au-text); padding: 4px 8px; border-radius: 2px; font-size: 12px; font-weight: 600; }
+.amount { font-weight: 700; color: var(--au-text); }
+
+.empty-state { text-align: center; padding: 80px 20px; color: var(--au-muted); }
+.empty-state i { font-size: 64px; margin-bottom: 20px; color: #eff2f5; }
+.empty-state p { font-size: 18px; }
+
+@media (max-width: 768px) {
+    .header { flex-direction: column; align-items: flex-start; gap: 16px; }
+    .room-info-card { flex-direction: column; align-items: flex-start; gap: 16px; }
+    .table th:nth-child(4), .table td:nth-child(4),
+    .table th:nth-child(5), .table td:nth-child(5) { display: none; }
+}

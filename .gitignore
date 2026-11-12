@@ -1,0 +1,35 @@
+# Build output
+target/
+build/
+!.mvn/wrapper/maven-wrapper.jar
+
+# IDE / editor
+.idea/
+.vscode/
+.vs/
+*.iml
+*.iws
+*.ipr
+.classpath
+.project
+.settings/
+.factorypath
+.apt_generated
+.springBeans
+.sts4-cache
+/nbproject/private/
+/nbbuild/
+/dist/
+
+# Logs & OS files
+*.log
+.DS_Store
+Thumbs.db
+
+# Runtime data (guest/room uploads are not source code - back them up separately)
+/uploads/
+/room-images/
+
+# Local configuration / secrets
+application-local.properties
+.env

@@ -1,0 +1,4 @@
+body { font-family: sans-serif; padding: 50px; text-align: center; background: var(--au-surface); }
+.error-container { background: var(--au-surface); padding: 40px; border-radius: 4px; box-shadow: 0 4px 20px rgba(0, 0, 0,0.1); display: inline-block; max-width: 800px; text-align: left; }
+h1 { color: #e74c3c; }
+pre { background: #eee; padding: 15px; border-radius: 5px; overflow-x: auto; font-size: 12px; }

@@ -1,0 +1,201 @@
+@import url("../vendor/phosphor/style.css");
+/* ---- theme tokens (light) ---- */
+:root{--au-page:#ffffff;--au-surface:#ffffff;--au-surface-rgb:255,255,255;--au-soft:#f2f9fd;--au-text:#1b2f4b;--au-muted:#6b809a;--au-line:#dce9f1}
+.ph-spin{display:inline-block;animation:auSpin 1s linear infinite}
+@keyframes auSpin{to{transform:rotate(360deg)}}
+/* Aurelian Hotel - shared theme (visual only, no behaviour) */
+:root{
+  --au-aqua:#2bb3e6; --au-aqua-deep:#1590c4; --au-lagoon:#0e4d6e; --au-ink:#1b2f4b;
+  --au-sky:#f2f9fd; --au-sand:#f3e0b0;
+}
+html body{background:var(--au-page);color:var(--au-text);font-family:'Open Sans',system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+html body h1,html body h2,html body h3,html body h4{font-family:'Montserrat','Open Sans',sans-serif;letter-spacing:.01em}
+html body ::selection{background:var(--au-aqua);color:#fff}
+html{scrollbar-color:var(--au-aqua) #eef7fc}
+html body ::-webkit-scrollbar{width:11px;height:11px}
+html body ::-webkit-scrollbar-track{background:#eef7fc}
+html body ::-webkit-scrollbar-thumb{background:var(--au-aqua);border-radius:6px;border:2px solid #eef7fc}
+
+/* Transparent navigation */
+html body .navbar{background:transparent !important;box-shadow:none !important;border-bottom:0 !important;backdrop-filter:none !important;-webkit-backdrop-filter:none !important}
+html body .navbar.scrolled{background:rgba(255,255,255,.9) !important;backdrop-filter:blur(12px) !important;-webkit-backdrop-filter:blur(12px) !important;box-shadow:0 10px 30px -20px rgba(15,53,80,.45) !important}
+html body .logo span{font-family:'Montserrat',sans-serif;font-weight:600;letter-spacing:.06em;font-size:20px;color:var(--au-text);text-transform:none}
+html body .nav-link{position:relative;background:transparent !important;transform:none !important;border-radius:0 !important;color:var(--au-text);font-family:'Montserrat',sans-serif;font-weight:500;font-size:14px;letter-spacing:.02em;padding:10px 16px}
+html body .nav-link:hover,html body .nav-link.active{color:var(--au-aqua-deep)}
+html body .nav-link::after{content:"";position:absolute;left:50%;bottom:0;height:2px;width:0;border-radius:2px;background:var(--au-aqua);transform:translateX(-50%);transition:width .45s cubic-bezier(.22,1,.36,1)}
+html body .nav-link.active::after{width:24px}
+html body .nav-link:hover::after,html body .nav-link:focus-visible::after{width:calc(100% - 20px)}
+@media (min-width:1181px){html body .nav-link i{display:none}}
+/* over the home hero (desktop): white text until the page scrolls */
+@media (min-width:1181px){
+  html body:has(section.hero,.au-page-hero) .navbar:not(.scrolled) .nav-link,
+  html body:has(section.hero,.au-page-hero) .navbar:not(.scrolled) .logo span,
+  html body:has(section.hero,.au-page-hero) .navbar:not(.scrolled) .user-name,
+  html body:has(section.hero,.au-page-hero) .navbar:not(.scrolled) .user-role{color:#fff}
+  html body:has(section.hero,.au-page-hero) .navbar:not(.scrolled) .nav-link::after{background:#fff}
+  html body:has(section.hero,.au-page-hero) .navbar:not(.scrolled) .nav-link:hover,
+  html body:has(section.hero,.au-page-hero) .navbar:not(.scrolled) .nav-link.active{color:#fff}
+}
+
+/* Controls */
+html body .btn-primary,html body .btn-secondary,html body .btn-signin,html body .btn-register{border-radius:999px;font-family:'Montserrat',sans-serif;letter-spacing:.03em}
+html body input:focus,html body select:focus,html body textarea:focus{outline:2px solid rgba(43,179,230,.45);outline-offset:1px;border-color:var(--au-aqua)}
+html body a:focus-visible,html body button:focus-visible{outline:2px solid var(--au-aqua);outline-offset:2px}
+html body hr{border-color:var(--au-line)}
+html body .footer-logo span{font-family:'Montserrat',sans-serif;letter-spacing:.08em}
+
+/* Section titles: wavy aqua underline */
+html body .section-title{color:var(--au-text);font-family:'Montserrat',sans-serif;font-weight:700}
+html body .section-title::after{content:"";display:block;width:56px;height:8px;margin:14px auto 0;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 56 8'%3E%3Cpath d='M0 4 q7 -6 14 0 t14 0 t14 0 t14 0' fill='none' stroke='%232bb3e6' stroke-width='2'/%3E%3C/svg%3E") center/contain no-repeat}
+
+/* Home hero (beach look) */
+html body .hero{height:100vh;min-height:640px}
+html body .hero::before{background:linear-gradient(180deg,rgba(8,38,59,.42) 0%,rgba(8,38,59,.08) 38%,rgba(8,38,59,.22) 100%)}
+html body .hero .hero-overlay{display:none}
+html body .hero-subtitle{font-family:'Montserrat',sans-serif;font-weight:700;font-size:clamp(15px,2vw,24px);letter-spacing:.22em;color:#fff;text-transform:uppercase}
+html body .hero-title{font-family:'Montserrat',sans-serif;font-weight:800;font-size:clamp(38px,7vw,84px);line-height:1.05;text-transform:uppercase;color:#fff;letter-spacing:.02em;text-shadow:0 2px 18px rgba(8,38,59,.35)}
+html body .hero-title span{background:none !important;-webkit-text-fill-color:#fff !important;color:#fff !important;font-size:inherit}
+html body .hero-description{max-width:640px;margin:0 auto 30px;font-size:15px;line-height:1.7;color:#fff;text-shadow:0 1px 8px rgba(8,38,59,.4)}
+html body .hero-buttons .btn-primary{background:var(--au-aqua);border:1px solid var(--au-aqua);color:#fff}
+html body .hero-buttons .btn-secondary{background:transparent;border:1px solid rgba(255,255,255,.85);color:#fff}
+.au-wave{position:absolute;left:0;right:0;bottom:-1px;width:100%;height:clamp(70px,11vw,140px);z-index:2;pointer-events:none;display:block}
+
+/* Hero slideshow */
+.au-slides{position:absolute;inset:0;z-index:-2;overflow:hidden;background:#8fd3f2}
+.au-slide{position:absolute;inset:0;background-size:cover;background-position:center;opacity:0;transition:opacity 1.4s ease}
+.au-slide.is-active{opacity:1;animation:auDrift 9s ease-out forwards}
+@keyframes auDrift{from{transform:scale(1)}to{transform:scale(1.06)}}
+.au-slide-ui{position:absolute;inset:0;z-index:3;pointer-events:none}
+.au-slide-ui>*{pointer-events:auto}
+.au-caption{display:none}
+.au-dots{position:absolute;left:50%;bottom:clamp(86px,12vw,150px);transform:translateX(-50%);display:flex;gap:10px}
+.au-dots button{width:26px;height:3px;border:0;padding:0;border-radius:2px;background:rgba(255,255,255,.55);cursor:pointer;transition:background .3s,width .3s}
+.au-dots button.on{background:#fff;width:44px}
+.au-arrows{position:absolute;inset:0;pointer-events:none;display:block}
+.au-arrows button{position:absolute;top:50%;transform:translateY(-50%);width:44px;height:44px;border:0;background:transparent;color:rgba(255,255,255,.85);font-size:22px;cursor:pointer;pointer-events:auto;transition:color .2s,transform .2s}
+.au-arrows button:first-child{left:clamp(8px,2.5vw,36px)}
+.au-arrows button:last-child{right:clamp(8px,2.5vw,36px)}
+.au-arrows button:hover{color:#fff;transform:translateY(-50%) scale(1.15)}
+
+/* Sign-in / register pages: white page, faint beach art */
+html body .hotel-bg{filter:none !important;opacity:.35;transform:none !important}
+html body .overlay{background:linear-gradient(180deg,rgba(255,255,255,.7),rgba(255,255,255,.92)) !important}
+html body .bg-pattern,html body .pattern-overlay{opacity:.12}
+html body .brand span,html body .welcome-tag h2,html body .welcome-tag p,html body .perk-item,html body .testimonial,html body .testimonial *{color:var(--au-text) !important}
+html body .login-card,html body .register-card{box-shadow:0 30px 70px -30px rgba(15,53,80,.35);border:1px solid var(--au-line)}
+
+@media (max-width:640px){.au-arrows button{display:none}}
+@media (prefers-reduced-motion:reduce){.au-slide.is-active{animation:none}.au-slide{transition:none}html body .nav-link::after{transition:none}}
+
+/* ---- Theme toggle button ---- */
+.au-theme-toggle{display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;margin-right:10px;border-radius:50%;border:1px solid var(--au-line);background:transparent;color:var(--au-text);font-size:19px;cursor:pointer;transition:background .25s,color .25s,border-color .25s,transform .25s}
+.au-theme-toggle:hover{background:var(--au-aqua);border-color:var(--au-aqua);color:#fff;transform:rotate(-12deg)}
+.au-theme-toggle.au-floating{position:fixed;right:20px;bottom:20px;z-index:9999;margin:0;background:var(--au-surface);box-shadow:0 10px 30px -10px rgba(15,53,80,.45)}
+@media (min-width:1181px){html body:has(section.hero,.au-page-hero) .navbar:not(.scrolled) .au-theme-toggle{color:#fff;border-color:rgba(255,255,255,.6)}}
+
+/* ---- Dark mode ---- */
+html[data-theme="dark"]{color-scheme:dark;
+  --au-page:#0b141c;--au-surface:#14222f;--au-surface-rgb:20,34,47;--au-soft:#0f1b26;--au-text:#e4edf4;--au-muted:#9db0c2;--au-line:#26394a;
+  --bg-color:#0b141c;--bg-light:#0f1b26;--bg-main:#0b141c;--header-bg:#0f1b26;--border:#26394a;--border-color:#26394a;
+  --text-main:#e4edf4;--text-color:#e4edf4;--text-primary:#e4edf4;--text-secondary:#9db0c2;--primary:#3d9cc9;--secondary-color:#3d9cc9}
+html[data-theme="dark"] body{background:var(--au-page);color:var(--au-text)}
+html[data-theme="dark"] .navbar.scrolled{background:rgba(11,20,28,.88) !important;box-shadow:0 10px 30px -20px rgba(0,0,0,.8) !important}
+html[data-theme="dark"] input:not([type=checkbox]):not([type=radio]):not([type=range]):not([type=file]):not([type=submit]):not([type=button]),
+html[data-theme="dark"] select,html[data-theme="dark"] textarea{background-color:var(--au-surface);color:var(--au-text);border-color:var(--au-line)}
+html[data-theme="dark"] ::placeholder{color:#7f93a7}
+html[data-theme="dark"] option{background:var(--au-surface);color:var(--au-text)}
+html[data-theme="dark"] img,html[data-theme="dark"] video{filter:brightness(.88)}
+html[data-theme="dark"] .au-slide{filter:brightness(.78)}
+html[data-theme="dark"] .au-wave path,html[data-theme="dark"] .au-wave circle{fill:var(--au-page)}
+html[data-theme="dark"] footer{background:#08121a !important}
+html[data-theme="dark"] .leaflet-tile{filter:invert(1) hue-rotate(180deg) brightness(.9) contrast(.9)}
+html[data-theme="dark"] .section-title,html[data-theme="dark"] h1,html[data-theme="dark"] h2,html[data-theme="dark"] h3,html[data-theme="dark"] h4{color:var(--au-text)}
+html[data-theme="dark"] .hero-title,html[data-theme="dark"] .hero-subtitle,html[data-theme="dark"] .hero-description{color:#fff}
+html[data-theme="dark"] table{color:var(--au-text)}
+html[data-theme="dark"] ::-webkit-scrollbar-track{background:#0f1b26}
+html[data-theme="dark"] ::-webkit-scrollbar-thumb{border-color:#0f1b26}
+html[data-theme="dark"] html,html[data-theme="dark"]{scrollbar-color:var(--au-aqua) #0f1b26}
+
+/* ---- Navbar layout & spacing ---- */
+html body .logo span{background:none !important;-webkit-text-fill-color:currentColor !important;color:var(--au-text);font-family:'Montserrat',sans-serif;font-size:21px;font-weight:700;letter-spacing:.1em;white-space:nowrap}
+@media (min-width:1181px){
+  html body:has(section.hero,.au-page-hero) .navbar:not(.scrolled) .logo span{color:#fff;-webkit-text-fill-color:#fff !important}
+  html body .nav-container{gap:28px;padding:0 clamp(8px,2vw,32px)}
+  html body .nav-left{flex:1 1 0;min-width:0}
+  html body .nav-menu{flex:0 0 auto;justify-content:center;gap:8px}
+  html body .nav-right{flex:1 1 0;min-width:0;justify-content:flex-end;gap:14px}
+  html body .nav-link{padding:12px 18px;white-space:nowrap;font-size:14px}
+}
+@media (min-width:1181px) and (max-width:1320px){
+  html body .logo span{font-size:17px;letter-spacing:.06em}
+  html body .nav-menu{gap:2px}
+  html body .nav-link{padding:12px 11px;font-size:13px}
+  html body .nav-container{gap:14px}
+}
+html body .nav-right .au-theme-toggle{margin:0}
+html body .notif-area{margin:0 !important}
+html body .notification-bell{width:42px;height:42px;display:flex;align-items:center;justify-content:center}
+
+/* Avatar-only profile button */
+html body .user-profile{padding:0 !important;gap:0 !important;border:0 !important;background:transparent !important;border-radius:50%;transform:none !important;box-shadow:none}
+html body .user-profile:hover{background:transparent !important;transform:none !important}
+html body .user-profile .avatar{width:42px;height:42px;border:2px solid #fff;box-shadow:0 0 0 2px var(--au-aqua),0 6px 16px -6px rgba(15,53,80,.45)}
+html[data-theme="dark"] .user-profile .avatar{border-color:var(--au-surface)}
+
+/* ---- Navbar: no overlap between logo and links; round bell ---- */
+html body .logo{flex-shrink:0}
+@media (min-width:1181px){
+  html body .nav-left{flex:0 0 auto;min-width:auto}
+  html body .nav-menu{flex:1 1 auto;min-width:0;justify-content:center}
+  html body .nav-right{flex:0 0 auto;min-width:auto}
+  html body .nav-container{gap:20px}
+}
+html body .notification-bell,html body .au-theme-toggle{width:42px;height:42px}
+html body .notification-bell{border-radius:50% !important;background:transparent !important;border:1px solid var(--au-line) !important;color:var(--au-text);transform:none !important}
+html body .notification-bell:hover{background:var(--au-aqua) !important;border-color:var(--au-aqua) !important;color:#fff;transform:none !important}
+html body .notification-badge{top:-3px;right:-3px;border:2px solid var(--au-page)}
+@media (min-width:1181px){html body:has(section.hero,.au-page-hero) .navbar:not(.scrolled) .notification-bell{color:#fff;border-color:rgba(255,255,255,.6) !important}}
+
+/* ---- Currency switcher ---- */
+.au-cur{position:relative;flex-shrink:0}
+.au-cur-btn{height:42px;display:inline-flex;align-items:center;gap:8px;padding:0 12px 0 10px;border-radius:999px;border:1px solid var(--au-line);background:transparent;color:var(--au-text);font:600 13px 'Montserrat',sans-serif;letter-spacing:.03em;cursor:pointer;white-space:nowrap;transition:background .25s,border-color .25s,color .25s}
+.au-cur-btn:hover,.au-cur-btn[aria-expanded="true"]{border-color:var(--au-aqua);background:rgba(43,179,230,.1)}
+.au-cur-btn i{font-size:12px;opacity:.75;transition:transform .25s}
+.au-cur-btn[aria-expanded="true"] i{transform:rotate(180deg)}
+.au-flag{width:22px;height:16px;border-radius:3px;object-fit:cover;display:block;box-shadow:0 0 0 1px rgba(8,38,59,.18);flex-shrink:0}
+.au-cur-menu{position:absolute;top:calc(100% + 12px);right:0;z-index:1200;width:min(260px,86vw);margin:0;padding:8px;list-style:none;background:var(--au-surface);border:1px solid var(--au-line);border-radius:16px;box-shadow:0 24px 50px -18px rgba(8,38,59,.45);animation:auCurIn .2s ease}
+.au-cur-menu[hidden]{display:none}
+@keyframes auCurIn{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:none}}
+.au-cur-menu li[data-cur]{display:flex;align-items:center;gap:12px;padding:10px 12px;border-radius:10px;cursor:pointer;color:var(--au-text);transition:background .2s}
+.au-cur-menu li[data-cur]:hover,.au-cur-menu li[data-cur]:focus-visible{background:rgba(43,179,230,.12);outline:none}
+.au-cur-menu .au-flag{width:28px;height:20px}
+.au-cur-name{display:flex;flex-direction:column;line-height:1.25;flex:1}
+.au-cur-name b{font:700 14px 'Montserrat',sans-serif}
+.au-cur-name small{font-size:12px;color:var(--au-muted)}
+.au-cur-menu li[data-cur]>i{color:var(--au-aqua);font-size:18px;opacity:0}
+.au-cur-menu li[aria-selected="true"]>i{opacity:1}
+.au-cur-note{margin:6px 4px 2px;padding:10px 8px 4px;border-top:1px solid var(--au-line);font-size:11.5px;line-height:1.5;color:var(--au-muted)}
+@media (min-width:1181px){
+  html body:has(section.hero,.au-page-hero) .navbar:not(.scrolled) .au-cur-btn{color:#fff;border-color:rgba(255,255,255,.6)}
+  html body:has(section.hero,.au-page-hero) .navbar:not(.scrolled) .au-cur-btn:hover{background:rgba(255,255,255,.14)}
+  .navbar.au-tight .nav-link{padding:12px 10px;font-size:13px}
+  .navbar.au-tight .au-cur-code{display:none}
+  .navbar.au-tighter .nav-link{padding:12px 7px;font-size:12.5px}
+  .navbar.au-tighter .au-cur-btn i{display:none}
+  .navbar.au-tighter .au-cur-btn{padding:0 10px}
+  .navbar.au-tighter .nav-container{gap:10px}
+}
+@media (max-width:1180px){.au-cur-code{display:none}.au-cur-btn{padding:0 10px}}
+
+/* ---- Compact (hamburger) range: name stays visible, tools stay tidy ---- */
+@media (max-width:1180px){
+  html body:has(section.hero,.au-page-hero) .navbar:not(.scrolled) .logo span{color:#fff;-webkit-text-fill-color:#fff !important}
+  html body:has(section.hero,.au-page-hero) .navbar:not(.scrolled) .au-cur-btn,
+  html body:has(section.hero,.au-page-hero) .navbar:not(.scrolled) .au-theme-toggle,
+  html body:has(section.hero,.au-page-hero) .navbar:not(.scrolled) .notification-bell{color:#fff;border-color:rgba(255,255,255,.6) !important}
+  html body:has(section.hero,.au-page-hero) .navbar:not(.scrolled) .mobile-toggle{color:#fff;background:rgba(255,255,255,.18)}
+  html body .nav-right{gap:10px}
+  html body .nav-left{gap:16px}
+}
+@media (max-width:560px){html body .logo span{font-size:15px;letter-spacing:.06em}}
+@media (max-width:440px){html body .logo span{display:none}}

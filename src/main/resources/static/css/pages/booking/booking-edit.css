@@ -1,0 +1,103 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+    font-family: 'Open Sans', sans-serif;
+    background: #f7fbfe;
+    color: var(--au-text);
+    padding-top: 90px;
+}
+.page {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 32px 20px 60px;
+}
+.page-header {
+    margin-bottom: 22px;
+}
+.page-header h1 {
+    font-family: 'Montserrat', serif;
+    font-size: 30px;
+    color: var(--au-text);
+}
+.page-header p {
+    font-size: 14px;
+    color: var(--au-muted);
+}
+.card {
+    background: var(--au-surface);
+    border-radius: 5px;
+    padding: 24px 22px;
+    border: 1px solid #d6e6f0;
+    box-shadow: 0 4px 14px rgba(0, 0, 0,0.04);
+}
+.summary {
+    margin-bottom: 18px;
+    font-size: 14px;
+    color: var(--au-text);
+}
+.summary strong { font-weight: 600; }
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 18px 24px;
+}
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+.label {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--au-text);
+}
+.control, .textarea {
+    width: 100%;
+    padding: 11px 12px;
+    border-radius: 3px;
+    border: 1px solid #d6e6f0;
+    font-size: 14px;
+    background: var(--au-surface);
+    transition: all 0.2s;
+}
+.control:focus, .textarea:focus {
+    outline: none;
+    border-color: #2bb3e6;
+    box-shadow: 0 0 0 3px rgba(43, 179, 230, 0.25);
+    background: var(--au-surface);
+}
+.textarea {
+    min-height: 90px;
+    resize: vertical;
+}
+.actions {
+    margin-top: 22px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+.btn {
+    padding: 9px 20px;
+    border-radius: 999px;
+    border: none;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+}
+.btn-secondary {
+    background: #eef7fc;
+    color: var(--au-text);
+}
+.btn-secondary:hover { background: #d6e6f0; }
+.btn-primary {
+    background: linear-gradient(145deg, #2bb3e6, #1590c4);
+    color: #fff;
+}
+.btn-primary:hover {
+    box-shadow: 0 8px 18px rgba(43, 179, 230, 0.35);
+}

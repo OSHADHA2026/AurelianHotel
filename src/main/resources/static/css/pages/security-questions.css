@@ -1,0 +1,154 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background: var(--au-surface);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hotel-bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url('/images/scenes/garden.svg') no-repeat center center/cover;
+    filter: blur(4px) brightness(0.6);
+    transform: scale(1.1);
+    z-index: 0;
+}
+
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 30% 50%, rgba(8, 38, 59, 0.7) 0%, rgba(8, 38, 59, 0.9) 100%);
+    z-index: 1;
+}
+
+.login-container {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: 480px;
+    padding: 0 20px;
+    animation: fadeIn 0.8s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.login-card {
+    background: rgba(var(--au-surface-rgb), 0.98);
+    backdrop-filter: blur(10px);
+    border-radius: 7px;
+    padding: 48px 40px;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.hotel-icon {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.hotel-icon i {
+    font-size: 48px;
+    color: #2bb3e6;
+}
+
+h2 {
+    font-family: 'Montserrat', serif;
+    font-weight: 900;
+    font-size: 28px;
+    letter-spacing: -0.5px;
+    margin-bottom: 8px;
+    text-align: center;
+    color: var(--au-text);
+}
+
+.subtitle {
+    text-align: center;
+    color: var(--au-muted);
+    font-weight: 400;
+    margin-bottom: 32px;
+    font-size: 14px;
+}
+
+.question-block {
+    margin-bottom: 24px;
+    padding: 16px;
+    background: var(--au-soft);
+    border-radius: 5px;
+    border: 1px solid #dce9f1;
+}
+
+.question-text {
+    display: block;
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--au-text);
+    margin-bottom: 12px;
+}
+
+.input-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.input-wrapper i {
+    position: absolute;
+    left: 16px;
+    color: var(--au-muted);
+    font-size: 16px;
+}
+
+.input-wrapper input {
+    width: 100%;
+    padding: 14px 14px 14px 48px;
+    border: 2px solid #dce9f1;
+    border-radius: 4px;
+    font-size: 14px;
+    transition: all 0.3s;
+    background: var(--au-surface);
+    font-weight: 500;
+}
+
+.input-wrapper input:focus {
+    border-color: #2bb3e6;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(43, 179, 230, 0.1);
+}
+
+.login-btn {
+    width: 100%;
+    padding: 16px;
+    background: linear-gradient(135deg, #0e4d6e 0%, #0a2d45 100%);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s;
+    margin-top: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.login-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.3);
+}

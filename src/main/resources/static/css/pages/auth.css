@@ -1,0 +1,76 @@
+/* Aurelian Hotel - Sign in / Register layout (visual only) */
+html body.au-auth{margin:0;min-height:100vh;display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);background:var(--au-page);color:var(--au-text);font-family:'Open Sans',system-ui,sans-serif;overflow-x:hidden}
+.au-auth *{box-sizing:border-box}
+
+/* ---- left: scenic panel ---- */
+.au-auth-hero{position:sticky;top:0;height:100vh;align-self:start;background-size:cover;background-position:center;color:#fff;overflow:hidden}
+.au-auth-hero::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(8,38,59,.55) 0%,rgba(8,38,59,.12) 42%,rgba(8,38,59,.72) 100%)}
+.au-auth-hero-inner{position:relative;z-index:1;height:100%;display:flex;flex-direction:column;justify-content:space-between;padding:clamp(28px,4.5vw,64px)}
+.au-auth-brand{display:inline-flex;align-items:center;gap:14px;color:#fff;text-decoration:none;align-self:flex-start}
+.au-auth-brand img{width:46px;height:46px;border-radius:12px;display:block}
+.au-auth-brand span{font-family:'Montserrat',sans-serif;font-weight:700;font-size:18px;letter-spacing:.14em}
+.au-eyebrow{display:inline-block;font-family:'Montserrat',sans-serif;font-weight:700;font-size:12px;letter-spacing:.28em;text-transform:uppercase;padding-bottom:12px;border-bottom:2px solid #2bb3e6;margin-bottom:22px}
+.au-auth-copy h1{margin:0 0 16px;font-family:'Montserrat',sans-serif;font-weight:800;font-size:clamp(30px,3.6vw,50px);line-height:1.1;color:#fff;text-shadow:0 2px 20px rgba(8,38,59,.35)}
+.au-auth-copy p{margin:0;max-width:430px;font-size:15px;line-height:1.7;color:rgba(255,255,255,.92)}
+.au-auth-points{list-style:none;margin:30px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:10px}
+.au-auth-points li{display:inline-flex;align-items:center;gap:8px;padding:9px 16px;border:1px solid rgba(255,255,255,.55);border-radius:999px;font-size:13px;font-weight:600;background:rgba(255,255,255,.12);backdrop-filter:blur(6px)}
+.au-auth-points i{font-size:17px}
+.au-auth-foot{font-size:12px;letter-spacing:.08em;color:rgba(255,255,255,.8)}
+
+/* ---- right: form panel ---- */
+.au-auth-main{display:flex;flex-direction:column;min-height:100vh;padding:clamp(24px,4vw,56px) clamp(24px,6vw,96px)}
+.au-back{display:inline-flex;align-items:center;gap:10px;align-self:flex-start;padding:10px 20px 10px 14px;border:1px solid var(--au-line);border-radius:999px;color:var(--au-text);font-family:'Montserrat',sans-serif;font-weight:600;font-size:13px;letter-spacing:.02em;text-decoration:none;transition:background .25s,color .25s,border-color .25s,gap .25s}
+.au-back i{font-size:17px}
+.au-back:hover{background:#2bb3e6;border-color:#2bb3e6;color:#fff;gap:14px}
+.au-auth-card{width:100%;max-width:460px;margin:auto;padding:clamp(28px,4vh,48px) 0}
+.au-register .au-auth-card{max-width:600px}
+.au-auth-card h2{margin:0 0 8px;font-family:'Montserrat',sans-serif;font-weight:800;font-size:clamp(26px,2.6vw,34px);color:var(--au-text);letter-spacing:.01em}
+.au-auth-card h2::after{content:"";display:block;width:56px;height:8px;margin-top:14px;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 56 8'%3E%3Cpath d='M0 4 q7 -6 14 0 t14 0 t14 0 t14 0' fill='none' stroke='%232bb3e6' stroke-width='2'/%3E%3C/svg%3E") left/contain no-repeat}
+.au-auth-card .subtitle{margin:0 0 32px;color:var(--au-muted);font-size:15px;line-height:1.6}
+.au-auth-card form{display:block}
+
+/* fields */
+.input-group,.form-row{margin-bottom:20px}
+.input-group>label,.form-row>label{display:block;margin-bottom:8px;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--au-muted)}
+.form-row-group{display:grid;grid-template-columns:1fr 1fr;gap:0 18px}
+.input-wrapper,.input-affix{position:relative}
+.input-wrapper>i:first-child,.input-affix>i:first-child{position:absolute;left:16px;top:50%;transform:translateY(-50%);font-size:19px;color:#2bb3e6;pointer-events:none;z-index:1}
+.input-wrapper input,.input-affix input,.input-affix select{width:100%;height:52px;padding:0 48px 0 48px;border:1.5px solid var(--au-line);border-radius:14px;background:var(--au-surface);color:var(--au-text);font:500 15px 'Open Sans',sans-serif;transition:border-color .2s,box-shadow .2s}
+.input-affix select{appearance:none;-webkit-appearance:none;cursor:pointer;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%236b809a' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 16px center;background-size:18px}
+.input-wrapper input::placeholder,.input-affix input::placeholder{color:#9db0c2;font-weight:400}
+.input-wrapper input:focus,.input-affix input:focus,.input-affix select:focus{outline:none;border-color:#2bb3e6;box-shadow:0 0 0 4px rgba(43,179,230,.16)}
+.password-toggle{position:absolute;right:16px;top:50%;transform:translateY(-50%);font-size:19px;color:var(--au-muted);cursor:pointer;transition:color .2s}
+.password-toggle:hover{color:#2bb3e6}
+.checkbox-group{display:flex;align-items:flex-start;gap:12px;margin:6px 0 24px;font-size:13.5px;line-height:1.55;color:var(--au-muted)}
+.checkbox-group input{width:18px;height:18px;margin-top:2px;accent-color:#2bb3e6;flex-shrink:0}
+.checkbox-group a,.register-link a,.login-alt a{color:#1590c4;font-weight:700;text-decoration:none}
+.checkbox-group a:hover,.register-link a:hover,.login-alt a:hover{text-decoration:underline}
+
+/* buttons */
+.login-btn,.btn-register{width:100%;height:54px;display:flex;align-items:center;justify-content:center;gap:12px;border:0;border-radius:999px;background:linear-gradient(135deg,#35c0f0,#1590c4);color:#fff;font-family:'Montserrat',sans-serif;font-weight:700;font-size:14px;letter-spacing:.14em;cursor:pointer;box-shadow:0 14px 28px -14px rgba(21,144,196,.9);transition:transform .25s,box-shadow .25s}
+.login-btn:hover,.btn-register:hover{transform:translateY(-2px);box-shadow:0 20px 34px -14px rgba(21,144,196,.95)}
+.login-btn i,.btn-register i{font-size:18px;transition:transform .25s}
+.login-btn:hover i,.btn-register:hover i{transform:translateX(4px)}
+.register-action{margin-top:4px}
+
+/* messages & links */
+.success-message,.error-message{display:flex;align-items:flex-start;gap:12px;margin:20px 0 0;padding:14px 16px;border-radius:12px;font-size:14px;line-height:1.5}
+.success-message{background:#e4f6ec;color:#17603a;border:1px solid #bfe8d0}
+.error-message{background:#fdecea;color:#a12b2b;border:1px solid #f5c6c1}
+.success-message i,.error-message i{font-size:20px;margin-top:1px}
+.register-link,.login-alt{margin:26px 0 0;text-align:center;font-size:14px;color:var(--au-muted)}
+.register-link+.register-link{margin-top:10px}
+.au-auth-card form+.success-message,.au-auth-card form+.error-message{margin-top:20px}
+
+/* ---- responsive ---- */
+@media (max-width:960px){
+  html body.au-auth{grid-template-columns:1fr}
+  .au-auth-hero{position:relative;height:auto;min-height:220px}
+  .au-auth-hero-inner{padding:24px}
+  .au-auth-copy,.au-auth-foot{display:none}
+  .au-auth-main{min-height:0;padding:28px 22px 48px}
+}
+@media (max-width:560px){.form-row-group{grid-template-columns:1fr}}
+html[data-theme="dark"] .success-message{background:#0f2a1e;color:#8fe0b3;border-color:#1d4a35}
+html[data-theme="dark"] .error-message{background:#2e1717;color:#f3a8a8;border-color:#5a2a2a}
+html[data-theme="dark"] .au-back:hover{color:#fff}
