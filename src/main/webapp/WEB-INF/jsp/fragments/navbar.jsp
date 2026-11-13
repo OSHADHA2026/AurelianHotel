@@ -46,7 +46,7 @@
                 <a href="${pageContext.request.contextPath}/rooms"
                    class="nav-link ${fn:contains(currentUri, '/rooms') ? 'active' : ''}">
                     <i class="ph ph-bed"></i>
-                    <span>Rooms & Availability</span>
+                    <span>Rooms & Offers</span>
                 </a>
             </div>
 

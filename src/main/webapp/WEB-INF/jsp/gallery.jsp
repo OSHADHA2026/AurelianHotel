@@ -39,7 +39,7 @@
     <div class="gallery-grid" id="gallery">
         <!-- Rooms -->
         <div class="gallery-item" data-category="rooms" onclick="openLightbox(this)">
-            <img src="${pageContext.request.contextPath}/images/scenes/suite.svg" alt="Presidential Suite">
+            <img src="https://images.unsplash.com/photo-1611892440504-42a792e24d32?auto=format&amp;fit=crop&amp;w=1200&amp;q=85" alt="Presidential Suite">
             <div class="gallery-overlay">
                 <h3>Presidential Suite</h3>
                 <p>Luxury living with city views</p>
@@ -47,7 +47,7 @@
         </div>
 
         <div class="gallery-item" data-category="rooms" onclick="openLightbox(this)">
-            <img src="${pageContext.request.contextPath}/images/scenes/suite.svg" alt="Deluxe Room">
+            <img src="https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&amp;fit=crop&amp;w=1200&amp;q=85" alt="Deluxe Room">
             <div class="gallery-overlay">
                 <h3>Deluxe King Room</h3>
                 <p>Comfort and elegance</p>
@@ -55,7 +55,7 @@
         </div>
 
         <div class="gallery-item" data-category="rooms" onclick="openLightbox(this)">
-            <img src="${pageContext.request.contextPath}/images/scenes/lobby.svg" alt="Executive Suite">
+            <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&amp;fit=crop&amp;w=1200&amp;q=85" alt="Executive Suite">
             <div class="gallery-overlay">
                 <h3>Executive Suite</h3>
                 <p>Perfect for business travelers</p>
@@ -63,9 +63,8 @@
         </div>
 
         <!-- Dining -->
-        <!-- Dining - 3 Working Images -->
         <div class="gallery-item" data-category="dining" onclick="openLightbox(this)">
-            <img src="${pageContext.request.contextPath}/images/scenes/lounge.svg" alt="Sky Lounge">
+            <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&amp;fit=crop&amp;w=1200&amp;q=85" alt="Sky Lounge">
             <div class="gallery-overlay">
                 <h3>Sky Lounge</h3>
                 <p>Rooftop bar with panoramic city views</p>
@@ -73,7 +72,7 @@
         </div>
 
         <div class="gallery-item" data-category="dining" onclick="openLightbox(this)">
-            <img src="${pageContext.request.contextPath}/images/scenes/dining.svg" alt="Wine Bar">
+            <img src="https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?auto=format&amp;fit=crop&amp;w=1200&amp;q=85" alt="Wine Cellar">
             <div class="gallery-overlay">
                 <h3>Wine Cellar</h3>
                 <p>Extensive collection of fine wines</p>
@@ -81,7 +80,7 @@
         </div>
 
         <div class="gallery-item" data-category="dining" onclick="openLightbox(this)">
-            <img src="${pageContext.request.contextPath}/images/scenes/dining.svg" alt="Fine Dining Restaurant">
+            <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&amp;fit=crop&amp;w=1200&amp;q=85" alt="Fine Dining Restaurant">
             <div class="gallery-overlay">
                 <h3>Main Restaurant</h3>
                 <p>Elegant fine dining experience</p>
@@ -90,7 +89,7 @@
 
         <!-- Spa -->
         <div class="gallery-item" data-category="spa" onclick="openLightbox(this)">
-            <img src="${pageContext.request.contextPath}/images/scenes/spa.svg" alt="Massage Therapy">
+            <img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&amp;fit=crop&amp;w=1200&amp;q=85" alt="Massage Therapy">
             <div class="gallery-overlay">
                 <h3>Massage Room</h3>
                 <p>Professional treatments</p>
@@ -98,7 +97,7 @@
         </div>
 
         <div class="gallery-item" data-category="spa" onclick="openLightbox(this)">
-            <img src="${pageContext.request.contextPath}/images/scenes/pool.svg" alt="Relaxation Area">
+            <img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&amp;fit=crop&amp;w=1200&amp;q=85" alt="Relaxation Area">
             <div class="gallery-overlay">
                 <h3>Relaxation Lounge</h3>
                 <p>Peaceful retreat</p>
@@ -106,18 +105,16 @@
         </div>
 
         <div class="gallery-item" data-category="spa" onclick="openLightbox(this)">
-            <img src="${pageContext.request.contextPath}/images/scenes/spa.svg" alt="Spa Ambiance">
+            <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&amp;fit=crop&amp;w=1200&amp;q=85" alt="Spa Ambiance">
             <div class="gallery-overlay">
                 <h3>Spa Ambiance</h3>
                 <p>Calming atmosphere</p>
             </div>
         </div>
 
-
         <!-- Exterior -->
-
         <div class="gallery-item" data-category="exterior" onclick="openLightbox(this)">
-            <img src="${pageContext.request.contextPath}/images/scenes/facade.svg" alt="Luxury Hotel Exterior">
+            <img src="${pageContext.request.contextPath}/images/scenes/lobby.svg" alt="Luxury Hotel Exterior">
             <div class="gallery-overlay">
                 <h3>Hotel Entrance</h3>
                 <p>Grand entrance with fountain and palm trees</p>
@@ -133,7 +130,7 @@
         </div>
 
         <div class="gallery-item" data-category="exterior" onclick="openLightbox(this)">
-            <img src="${pageContext.request.contextPath}/images/scenes/garden.svg" alt="Hotel Garden">
+            <img src="https://www.travoh.com/wp-content/uploads/2022/07/015-Mandarin-Oriental-Paris-Hotel-Paris-France-Camelia-Restaurant-Terrace.jpg" alt="Hotel Garden">
             <div class="gallery-overlay">
                 <h3>Garden Terrace</h3>
                 <p>Beautiful landscaped gardens with seating</p>

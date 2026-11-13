@@ -39,7 +39,7 @@
                         <img class="hero-video-bg" src="${pageContext.request.contextPath}/images/scenes/beach.svg" alt="">
                         <div class="hero-overlay"></div>
                         <div class="hero-content">
-                            <h1>Rooms &amp; Availability</h1>
+                            <h1>Rooms &amp; Offers</h1>
                             <p>Browse our rooms and suites, check live availability and book your stay in minutes</p>
                             <div class="hero-decoration">
                                 <span class="line"></span>
